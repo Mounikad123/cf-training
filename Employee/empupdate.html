@@ -1,0 +1,157 @@
+<html>
+
+<head>
+	<title>Registration Page</title>
+
+	<link rel="stylesheet" href="style1.css">
+	<script src="empupdate.js"></script>
+
+</head>
+
+
+<body>
+
+
+	<center>
+
+		<h3 style="text-align: center;color: purple;">Employee-Portal</h3>
+
+
+		<div class="tab">
+			<button class="tablinks" onclick="employee('emp1',false)">Add-Details</button>
+			<button class="tablinks" onclick="employee3([])">View-Details</button>
+		</div>
+
+
+		<div id="emp1" class="tabcontent">
+
+			<form id="submit-form" name="myform" method="post">
+
+				<table class="content-table" id="editemp">
+
+					<tr>
+						<td>
+
+						</td>
+						<td>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td>
+							Employee-Code :
+						</td>
+						<td>
+							<input type="text" placeholder="Code" id="co" name="code" >
+						</td>
+					</tr>
+
+
+					<tr>
+						<td>
+							Employee-Name :
+						</td>
+						<td>
+							<input type="text" placeholder="Name" id="na" name="name">
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							Employee-Phno :
+						</td>
+						<td>
+							<input type="number" placeholder="Phno" id="ph" name="phno">
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							Employee-Type :
+						</td>
+						<td>
+							<select name="type" id="type1">
+								<option value="">Select</option>
+								<option value="Full-Time">Full-Time</option>
+								<option value="Part-Time">Part-Time</option>
+								<option value="Contract">Contract</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							Employee-Desg :
+						</td>
+						<td>
+
+							<select name="desg" id="type2">
+								<option value="">Select</option>
+								<option value="Tester">Tester</option>
+								<option value="Software-Developer">Software-Developer</option>
+								<option value="Business-Analyst">Business-Analyst</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							Employee-Email :
+						</td>
+						<td>
+							<input type="email" placeholder="Email" id="em" name="email">
+						</td>
+					</tr>
+
+					<tr>
+
+						<td>
+
+
+						</td>
+
+						<td>
+							<input type="button" id="container" value="submit" onclick="validate()">
+							<input type = "button" id = "container1"  value = "reset" onclick = "resetform()" >
+
+						</td>
+					</tr>
+				</table>
+
+			</form>
+		</div>
+
+		<!--<div id = "record">
+						<input type  = "text" id = "record1"  value = "NO RECORDS FOUND">
+
+		</div>-->
+
+		<div id="emp2" class="tabcontent">
+
+			<input type="text" id="myInput"  onkeyup = "searchemp(event)" placeholder="search for code">
+
+
+			<form id="view-form" method="post" name="viewForm">
+
+				<table border="2" id="display" cellpadding="2" cellspacing="2">
+
+					<tr>
+						<th>Code</th>
+						<th>Name</th>
+						<th>Phno</th>
+						<th>Type</th>
+						<th>Desg</th>
+						<th>Email</th>
+						<th>Actions</th>
+					</tr>
+				</table>
+
+			</form>
+		</div>
+
+	</center>
+
+</body>
+
+</html>
